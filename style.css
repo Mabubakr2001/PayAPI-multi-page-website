@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --anchorBgcolor: #BA4776;
+    --mainColor: #fff;
+    --mainColor2: #EEF3F9;
+    --subColor: #39536C;
+    --subColor2: #1C262F;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+a:hover{
+    transform: scale(0.9);
+}
+
+input{
+    outline: none;
+}
+
+header{
+    background-color: #EEF3F9;
+}
+
+nav{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header{
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+nav div{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div h3{
+    font-size: 2.5em;
+    margin-right: 10px;
+    color: var(--subColor);
+}
+
+nav div h3 span{
+    font-weight: 200;
+}
+
+nav div ul li{
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+nav div ul li a{
+    color: var(--subColor);
+    position: relative;
+    font-weight: 550;
+}
+
+nav div ul li a:hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--subColor);
+    bottom: 0;
+    animation-name: slideFromleft;
+    animation-duration: 0.2s;
+}
+
+nav > a{
+    padding: 15px;
+    background-color: var(--anchorBgcolor);
+    border-radius: 30px;
+    font-weight: 450;
+    color: var(--mainColor);
+}
+
+/* Animation */
+
+@keyframes slideFromleft{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/* Face Section */
+
+.face{
+    background-color: var(--mainColor2);
+}
+
+.face .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.face-info{
+    width: 55%;
+}
+
+.face-info h3{
+    font-size: 60px;
+    color: var(--subColor);
+    margin-bottom: 35px;
+}
+
+.search{
+    display: flex;
+    height: 54px;
+    align-items: center;
+    position: relative;
+}
+
+.search input{
+    border: none;
+    width: 65%;
+    height: 100%;
+    border-radius: 30px;
+    padding-left: 15px;
+    font-size: 1em;
+}
+
+.search a{
+    border-radius: 30px;
+    color: var(--mainColor);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: var(--anchorBgcolor);
+    position: absolute;
+    right: 20%;
+}
+
+.face-info p{
+    margin: 15px 0 0 25px;
+    display: flex;
+    align-items: center;
+    color: grey;
+    font-size: 0.9em;
+}
+
+.face-info p a{
+    text-decoration: underline;
+    margin-left: 5px;
+    color: var(--subColor);
+}
+
+.face-info p a:hover{
+    transform: scale(1);
+}
+
+/* Work Section */
+
+.work{
+    background-color: var(--subColor2);
+    height: 400px;
+}
+
+.work .container{
+    color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work .container div:nth-child(1){
+    width: 45%;
+}
+
+.work .container div:nth-child(1) h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.work .container div:nth-child(1) p{
+    margin-bottom: 20px;
+    color: rgb(177, 177, 177);
+}
+
+.work .container div:nth-child(1) a{
+    display: inline-block;
+    color: #fff;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
+
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.work-grid p{
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-grid p i{
+    margin-right: 10px;
+}
+
+/* Features Section */
+
+.features{
+    background-color: var(--mainColor2);
+    padding: 50px 0;
+}
+
+.implement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.implement .search input{
+    position: absolute;
+    left: 40px;
+}
+
+.implement .search  a{
+    position: absolute;
+    right: 0;
+}
+
+.implement > h3{
+    color: var(--subColor);
+    font-size: 40px;
+}
+
+.implement img{
+    width: 50%;
+}
+
+.implement div{
+    width: 50%;
+}
+
+.implement div h3{
+    font-size: 40px;
+    color: var(--subColor);
+    margin-bottom: 20px;
+}
+
+.implement div p{
+    color: grey;
+}
+
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 30px;
+    margin: 30px 0 100px;
+}
+
+.features-grid div{
+    text-align: center;
+}
+
+.features-grid div img,
+.features-grid div h3{
+    margin-bottom: 20px;
+}
+
+.features-grid div h3{
+    color: var(--subColor);
+}
+
+.features-grid div p{
+    color: grey;
+}
+
+footer{
+    background-color: var(--subColor2);
+}
+
+footer nav div h3,
+footer nav div ul li a{
+    color: var(--mainColor);
+}
+
+footer nav div ul li a:hover::before{
+    background-color: var(--mainColor);
+}
+
+footer nav div:nth-child(2){
+    width: 15%;
+}
+
+footer nav div:nth-child(2) a{
+    color: var(--mainColor);
+}
+
+footer nav div:nth-child(2) a:hover{
+    transform: scale(1);
+}
+
+footer nav div:nth-child(2) a:nth-child(1):hover{
+    color: #1778F2;
+}
+
+footer nav div:nth-child(2) a:nth-child(2):hover{
+    color: #fb3958;
+}
+
+footer nav div:nth-child(2) a:nth-child(3):hover{
+    color: #00acee;
+}
+
+/* about.html */
+
+.about{
+    background-color: var(--mainColor2);
+    padding: 50px 0;
+}
+
+.about-info > h3{
+    font-size: 50px;
+    width: 70%;
+    margin-bottom: 50px;
+    color: var(--subColor);
+}
+
+.info-details{
+    margin-bottom: 80px;
+}
+
+.info-details div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-details div:nth-child(1){
+    margin-bottom: 50px;
+}
+
+.info-details div h3{
+    font-size: 30px;
+    width: 20%;
+    color: var(--subColor);
+}
+
+.info-details div p{
+    width: 75%;
+    color: var(--subColor);
+}
+
+.team{
+    width: 100%;
+    height: 500px;
+    background-image: url("photos/team.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 80px;
+}
+
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 30px;
+    margin-bottom: 80px;
+}
+
+.team-grid div{
+    padding: 10px 0;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+.team-grid div p{
+    color: rgb(134, 134, 134);
+}
+
+.team-grid div h3{
+    font-size: 50px;
+    color: var(--anchorBgcolor);
+}
