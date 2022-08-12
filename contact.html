@@ -10,7 +10,7 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-        <title>About PayAPI</title>
+        <title>Contact PayAPI</title>
     </head>
     <body>
         <!-- Header -->
@@ -40,48 +40,35 @@
             </div>
         </header>
 
-        <!-- About Section -->
+        <!-- Contact Section -->
 
-        <section class="about">
+        <section class="contact">
             <article class="container">
-                <div class="about-info">
-                    <h3>We empower innovators by delivering access to the financial system</h3>
-                    <div class="info-details">
+                <p>Submit a help request and we’ll get in touch shortly.</p>
+                <div class="contact-flex">
+                    <form autocomplete="off" class="form-1">
+                        <input type="text" name="first-name" placeholder="First Name" required>
+                        <input type="text" name="second-name" placeholder="Last Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="company-name" placeholder="Company Name" required>
+                        <input type="text" name="title" placeholder="Title">
+                        <textarea name="message" spellcheck="true" cols="30" rows="5" placeholder="Message"></textarea>
                         <div>
-                            <h3>Our Vision</h3>
-                            <p>Our main goal is to build beautiful consumer experiences along with developer-friendly infrasturcture. The resault is an intelligent tool that gives everyone the ability to create amazing products that solve big problems. We are deeply focused on democratizing financial services through technology.</p>
+                            <input type="checkbox" value="accept-terms" id="terms">
+                            <label for="terms">Stay up-to-date with company announcements and updates to our API</label>
                         </div>
-                        <div>
-                            <h3>Our Business</h3>
-                            <p>At the core of our platform is the technical infrastructure APIs that connect consumers. Our innovative product provides key insights for businesses and individuals, as well as robust reporting for traditional financial institutions and developers.</p>
+                        <input type="submit">
+                    </form>
+                    <div class="companies">
+                        <p>Join the thousands of innovators already building with us</p>
+                        <div class="work-grid">
+                            <img src="photos/tesla.svg">
+                            <img src="photos/microsoft.svg">
+                            <img src="photos/hewlett-packard.svg">
+                            <img src="photos/oracle.svg">
+                            <img src="photos/google.svg">
+                            <img src="photos/nvidia.svg">
                         </div>
-                    </div>
-                </div>
-            </article>
-            <div class="team"></div>
-            <article class="container">
-                <div class="team-grid">
-                    <div>
-                        <p>Team Members</p>
-                        <h3>300+</h3>
-                    </div>
-                    <div>
-                        <p>Offices in the US</p>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <p>Transactions analyzed</p>
-                        <h3>10M+</h3>
-                    </div>
-                </div>
-                <div class="info-details">
-                    <div>
-                        <h3>The Culture</h3>
-                        <p>We strongly belive there's always an oppurtunity to learn from each other outside of day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. We always value cross-team collaboration and diversity of thought, no matter the job title.</p>
-                    </div>
-                    <div>
-                        <h3>The People</h3>
-                        <p>We've all passionate about building a more efficient and inclusive financial infrastructure together. At PayAPI, we have diverse backgrounds and skills.</p>
                     </div>
                 </div>
                 <div class="implement">
@@ -114,6 +101,7 @@
                 </div>
             </nav>
         </footer>
+
         <script src="main.js"></script>
     </body>
 </html>
