@@ -34,10 +34,6 @@ a{
     letter-spacing: 1px;
 }
 
-a:hover{
-    transform: scale(0.9);
-}
-
 input{
     outline: none;
 }
@@ -60,6 +56,19 @@ nav{
     margin: 0 auto;
 }
 
+.container > h3,
+.container > p{
+    font-size: 50px;
+    font-weight: 300;
+    padding: 20px 0;
+    color: var(--subColor);
+}
+
+.container > p{
+    width: 60%;
+    font-weight: 400;
+}
+
 /* Header */
 
 header{
@@ -73,14 +82,8 @@ nav div{
     justify-content: space-between;
 }
 
-nav div h3{
-    font-size: 2.5em;
-    margin-right: 10px;
-    color: var(--subColor);
-}
-
-nav div h3 span{
-    font-weight: 200;
+nav div img{
+    margin-top: 5px;
 }
 
 nav div ul li{
@@ -111,6 +114,77 @@ nav > a{
     border-radius: 30px;
     font-weight: 450;
     color: var(--mainColor);
+    margin-top: 7px;
+}
+
+nav > a:hover{
+    background-color: #cc4f83;
+}
+
+
+/* Drop Menu */
+
+.drop-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--subColor2);
+    display: none;
+}
+
+.show-drop--menu{
+    display: none;
+    width: 70%;
+    height: 100vh;
+}
+
+.drop-menu ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    position: absolute;
+    top: 80px;
+    line-height: 50px;
+    border-top: 1px solid #fff;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.drop-menu ul li a{
+    color: #fff;
+}
+
+.drop-menu ul li a:hover{
+    color: grey;
+}
+
+.drop-menu ul li:last-child a{
+    background-color: var(--anchorBgcolor);
+    padding: 0 20px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.drop-menu ul li:last-child a:hover{
+    color: var(--mainColor);
+    background-color: #cc4f83;
+}
+
+.menu-icon{
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    display: none;
+    background-image: url("photos/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.close-icon{
+    background-image: url("photos/close.svg") !important;
 }
 
 /* Animation */
@@ -174,6 +248,10 @@ nav > a{
     right: 20%;
 }
 
+.search a:hover{
+    background-color: #cc4f83;
+}
+
 .face-info p{
     margin: 15px 0 0 25px;
     display: flex;
@@ -190,13 +268,14 @@ nav > a{
 
 .face-info p a:hover{
     transform: scale(1);
+    color: var(--subColor2);
 }
 
 /* Work Section */
 
 .work{
     background-color: var(--subColor2);
-    height: 400px;
+    height: 450px;
 }
 
 .work .container{
@@ -229,22 +308,18 @@ nav > a{
     border-radius: 30px;
 }
 
+.work .container div:nth-child(1) a:hover{
+    color: var(--subColor);
+    background-color: var(--mainColor);
+}
+
 .work-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.work-grid p{
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
+    gap: 30px;
     align-items: center;
-}
-
-.work-grid p i{
-    margin-right: 10px;
+    justify-items: center;
 }
 
 /* Features Section */
@@ -262,7 +337,7 @@ nav > a{
 
 .implement .search input{
     position: absolute;
-    left: 40px;
+    left: 60px;
 }
 
 .implement .search  a{
@@ -317,11 +392,13 @@ nav > a{
     color: grey;
 }
 
+/* Footer */
+
 footer{
     background-color: var(--subColor2);
+    padding: 20px 0;
 }
 
-footer nav div h3,
 footer nav div ul li a{
     color: var(--mainColor);
 }
@@ -422,4 +499,463 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 .team-grid div h3{
     font-size: 50px;
     color: var(--anchorBgcolor);
+}
+
+/* pricing.html */
+
+.pricing{
+    background-color: var(--mainColor2);
+    padding-bottom: 50px;
+}
+
+.pricing-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 35px;
+    margin-bottom: 50px;
+}
+
+.first h3{
+    font-size: 30px;
+    font-weight: 300;
+    color: var(--anchorBgcolor);
+    margin-bottom: 10px;
+}
+
+.first p{
+    color: var(--subColor);
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+
+.first span{
+    display: block;
+    font-size: 55px;
+    font-weight: 300;
+    color: var(--subColor);
+    margin-bottom: 5px;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    line-height: 32px;
+}
+
+.second li{
+    color: var(--subColor);
+}
+
+.second li i{
+    margin-right: 5px;
+    color: var(--anchorBgcolor);
+}
+
+.pricing-grid--child a:last-child{
+    display: inline-block;
+    font-size: 14px;
+    margin: 20px 0;
+    padding: 15px 25px;
+    border: 1px solid var(--subColor);
+    border-radius: 30px;
+    color: var(--subColor);
+}
+
+.pricing-grid--child a:last-child:hover{
+    color: var(--mainColor);
+    background-color: var(--subColor);
+}
+
+/* contact.html */
+
+.contact{
+    background-color: var(--mainColor2);
+    padding-bottom: 50px;
+}
+
+.contact-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form-1{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.form-1 > input,
+.form-1 > textarea{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--subColor);
+    background-color: var(--mainColor2);
+    font-size: 1em;
+}
+
+.form-1 > input{
+    padding: 25px 20px;
+}
+
+.form-1 > textarea{
+    padding: 25px 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-1 div{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    width: 90%;
+}
+
+.form-1 div input{
+    display: inline-block;
+    margin-right: 10px;
+    width: 28px;
+    height: 25px;
+    position: relative;
+}
+
+.form-1 div input::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--subColor);
+}
+
+.form-1 div input:checked::before{
+    background-image: url("photos/icon-check.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    background-color: var(--anchorBgcolor);
+}
+
+.form-1 div label{
+    font-size: 15px;
+    color: var(--subColor);
+}
+
+.form-1 input[type="submit"]{
+    display: inline-block;
+    width: 30%;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: var(--subColor);
+    margin-top: 10px;
+    border: 1px solid var(--subColor);
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.form-1 input[type="submit"]:hover{
+    color: var(--mainColor);
+    background-color: var(--subColor);
+}
+
+.companies{
+    width: 50%;
+}
+
+.companies p{
+    font-size: 25px;
+    margin: 0 0 30px 18px;
+    color: var(--subColor);
+}
+
+/* Mobiles */
+
+@media (min-width: 250px) and (max-width: 767px){
+    nav{
+        width: 90%;
+    }
+    
+    .container{
+        width: 90%;
+    }
+    
+
+    .menu-icon{
+        display: inline-block;
+        z-index: 100;
+    }
+
+    .show-drop--menu{
+        display: block;
+        transition: width 0.7s, height 0.7s;
+    }
+    
+    nav div img{
+        margin-top: 0;
+    }
+    
+    header nav div ul{
+        display: none;
+    }
+
+    
+    nav > a{
+        display: none;
+    }
+
+    /* Face Section */
+
+    .face{
+        height: 750px;
+        padding-bottom: 120px;
+    }
+    
+    .face .container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+    }
+
+    .face .container img{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 140px);
+        height: 60%;
+        width: 320px;
+    }
+    
+    .face-info{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        top: 56%;
+    }
+    
+    .face-info h3{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .search input{
+        width: 100%;
+    }
+    
+    .search a{
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        top: 130%;
+        right: 0;
+    }
+    
+    .face-info p{
+        margin: 0;
+        justify-content: center;
+        position: relative;
+        bottom: -42%;
+    }
+
+    /* Work Section */
+
+    .work{
+        height: 700px;
+        padding-bottom: 50px;
+    }
+
+    .work .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:stretch;
+        align-items: center;
+    }
+
+    .work .container div:nth-child(1){
+        margin: 30px 0;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .work .container div:nth-child(1) h3{
+        font-size: 30px;
+    }
+
+    .work-grid{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px 0;
+        align-items: center;
+        justify-items: center;
+    }
+
+        /* Features Section */
+
+    .features{
+        background-color: var(--mainColor2);
+        padding: 0;
+        height: 2500px;
+    }
+
+    .features .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .implement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 40%;
+        margin-bottom: 30px;
+    }
+
+    .implement > h3{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .implement div{
+        width: 100%;
+        text-align: center;
+    }
+
+    .implement div h3{
+        font-size: 35px;
+    }
+
+    .implement:nth-child(1) img{
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    } 
+
+    .implement:nth-child(1) div{
+        position: absolute;
+        top: 75%;
+    }
+
+    .implement:nth-child(2) img{
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        left: 10px;
+    }
+
+    .implement:nth-child(2) div{
+        position: absolute;
+        top: 85%;
+    }
+
+    .features-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0 30px;
+        margin: 70px 0 0 0;
+    }
+
+    .features-grid div{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .features-grid div h3{
+        font-size: 22px;
+    }
+
+    .implement:nth-child(4){
+        height: 17%;
+        justify-content: stretch;
+    }
+    
+    .implement:nth-child(4) .search input{
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    
+    .implement:nth-child(4) .search a{
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        background-color: var(--anchorBgcolor);
+        position: absolute;
+        top: 150%;
+        right: 0;
+    }
+
+    /* Footer */
+
+    footer{
+        background-color: var(--subColor2);
+        padding: 20px 0;
+    }
+
+    footer nav,
+    footer nav div,
+    footer nav div ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer nav div svg{
+        margin-bottom: 20px;
+    }
+
+    footer nav div ul{
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    footer nav div ul li{
+        margin: 0;
+    }
+    
+
+    
+    footer nav div:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+    }
+    
+    footer nav div:nth-child(2) a{
+        color: var(--mainColor);
+    }
+    
+    footer nav div:nth-child(2) a:hover{
+        transform: scale(1);
+    }
+    
+    footer nav div:nth-child(2) a:nth-child(1):hover{
+        color: #1778F2;
+    }
+    
+    footer nav div:nth-child(2) a:nth-child(2):hover{
+        color: #fb3958;
+    }
+    
+    footer nav div:nth-child(2) a:nth-child(3):hover{
+        color: #00acee;
+    }
+}
+
+/* Tablets */
+
+@media (min-width: 768px) and (max-width: 1023px){
+    
 }
