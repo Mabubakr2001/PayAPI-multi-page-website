@@ -136,7 +136,7 @@ nav > a:hover{
 
 .show-drop--menu{
     display: none;
-    width: 70%;
+    width: 85%;
     height: 100vh;
 }
 
@@ -160,11 +160,17 @@ nav > a:hover{
     color: grey;
 }
 
+.drop-menu ul li:last-child{
+    width: 80%;
+}
+
 .drop-menu ul li:last-child a{
     background-color: var(--anchorBgcolor);
     padding: 0 20px;
     border-radius: 30px;
     display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 .drop-menu ul li:last-child a:hover{
@@ -253,9 +259,7 @@ nav > a:hover{
 }
 
 .face-info p{
-    margin: 15px 0 0 25px;
-    display: flex;
-    align-items: center;
+    margin: 15px 0 0 10px;
     color: grey;
     font-size: 0.9em;
 }
@@ -392,6 +396,20 @@ nav > a:hover{
     color: grey;
 }
 
+.start h3{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.start .search{
+    justify-content: center;
+}
+
+.start .search a{
+    right: 17.5%;
+}
+
 /* Footer */
 
 footer{
@@ -472,11 +490,13 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 .team{
     width: 100%;
     height: 500px;
-    background-image: url("photos/team.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     margin-bottom: 80px;
+}
+
+.team img{
+    width: 100%;
+    height: 100%;
+    filter: contrast(110%);
 }
 
 .team-grid{
@@ -709,7 +729,7 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 
     .face{
         height: 750px;
-        padding-bottom: 120px;
+
     }
     
     .face .container{
@@ -735,7 +755,7 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
     }
     
     .face-info h3{
-        font-size: 2em;
+        font-size: 23px;
         text-align: center;
     }
 
@@ -753,15 +773,15 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
     
     .face-info p{
         margin: 0;
-        justify-content: center;
+        text-align: center;
         position: relative;
-        bottom: -42%;
+        bottom: -90px;
     }
 
     /* Work Section */
 
     .work{
-        height: 700px;
+        height: fit-content;
         padding-bottom: 50px;
     }
 
@@ -769,8 +789,6 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content:stretch;
-        align-items: center;
     }
 
     .work .container div:nth-child(1){
@@ -786,7 +804,7 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 
     .work-grid{
         width: 100%;
-        height: 100%;
+        height: fit-content;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
@@ -799,7 +817,7 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 
     .features{
         background-color: var(--mainColor2);
-        padding: 0;
+        padding-bottom: 100px;
         height: 2500px;
     }
 
@@ -827,11 +845,12 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
 
     .implement div{
         width: 100%;
+        height: fit-content;
         text-align: center;
     }
 
     .implement div h3{
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .implement:nth-child(1) img{
@@ -897,6 +916,20 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
         right: 0;
     }
 
+    .start h3{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    
+    .start .search{
+        justify-content: center;
+    }
+    
+    .start .search a{
+        right: 0;
+    }
+
     /* Footer */
 
     footer{
@@ -952,10 +985,294 @@ footer nav div:nth-child(2) a:nth-child(3):hover{
     footer nav div:nth-child(2) a:nth-child(3):hover{
         color: #00acee;
     }
+
+    /* about.html */
+
+    .about{
+        padding-bottom: 100px;
+    }
+
+    .about-info > h3{
+        width: 100%;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .info-details div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .info-details div h3{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info-details div p{
+        width: 100%;
+    }
+    
+    .team-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px 0;
+        margin-bottom: 80px;
+    }
+    
+    .team-grid div{
+        text-align: center;
+    }
+
+        /* pricing.html */
+
+    .pricing{
+        padding-bottom: 100px;
+    }
+
+    .pricing .container h3{
+        text-align: center;
+    }
+
+    .pricing-grid{
+        text-align: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 25px 0;
+        margin-bottom: 50px;
+    }
+
+    .first h3{
+        font-size: 30px;
+        font-weight: 300;
+        color: var(--anchorBgcolor);
+        margin-bottom: 10px;
+    }
+
+    .first p{
+        color: var(--subColor);
+        line-height: 27px;
+        margin-bottom: 10px;
+    }
+
+    .first span{
+        display: block;
+        font-size: 55px;
+        font-weight: 300;
+        color: var(--subColor);
+        margin-bottom: 5px;
+    }
+
+    .second{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        line-height: 32px;
+    }
+
+        /* contact.html */
+
+    .contact{
+        padding-bottom: 100px;
+    }
+
+    .contact .container > p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+
+    .form-1 div{
+        width: 100%;
+    }
+
+    .form-1 div input{
+        display: inline-block;
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .form-1 div input::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--subColor);
+    }
+
+    .form-1 div input:checked::before{
+        background-image: url("photos/icon-check.svg");
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: center;
+        background-color: var(--anchorBgcolor);
+    }
+
+    .form-1 div label{
+        font-size: 15px;
+        color: var(--subColor);
+    }
+
+    .form-1 input[type="submit"]{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+    .companies{
+        width: 100%;
+    }
+
+    .companies p{
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
 }
 
 /* Tablets */
 
-@media (min-width: 768px) and (max-width: 1023px){
+@media (min-width: 768px) and (max-width: 1100px){
+    nav{
+        width: 95%;
+        margin: 0 auto 0;
+        justify-content: space-between;
+    }
     
+    .container{
+        width: 90%;
+    }
+    
+    nav div img{
+        margin-top: 0;
+    }
+   
+    nav > a{
+        padding: 15px;
+        background-color: var(--anchorBgcolor);
+        border-radius: 30px;
+        font-weight: 450;
+        color: var(--mainColor);
+        margin-top: 7px;
+    }
+    
+    nav > a:hover{
+        background-color: #cc4f83;
+    }
+
+    /* Face Section */
+
+    .face{
+        height: 750px;
+
+    }
+    
+    .face .container{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+    }
+
+    .face .container img{
+        position: absolute;
+        top: 0;
+        left: calc(50% - 140px);
+        height: 60%;
+        width: 320px;
+    }
+    
+    .face-info{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        top: 56%;
+    }
+    
+    .face-info h3{
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .search input{
+        width: 100%;
+    }
+    
+    .search a{
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        top: 130%;
+        right: 0;
+    }
+    
+    .face-info p{
+        margin: 0;
+        text-align: center;
+        position: relative;
+        bottom: -90px;
+    }
+
+    .work{
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    .work .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .work .container div:nth-child(1){
+        margin: 30px 0;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+
+    .work-grid{
+        width: 100%;
+    }
+
+    .features,
+    .about,
+    .pricing,
+    .contact{
+        padding-bottom: 100px;
+    }
+
+    .start h3{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    
+    .start .search{
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .start .search a{
+        right: 0;
+    }
 }
