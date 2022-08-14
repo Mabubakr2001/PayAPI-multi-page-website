@@ -136,8 +136,12 @@ nav > a:hover{
 
 .show-drop--menu{
     display: none;
-    width: 85%;
     height: 100vh;
+    animation-name: slideFromright;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 .drop-menu ul{
@@ -201,6 +205,24 @@ nav > a:hover{
     }
     100%{
         width: 100%;
+    }
+}
+
+@keyframes slideFromright{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+}
+
+@keyframes returnBack{
+    0%{
+        width: 85%;
+    }
+    100%{
+        width: 0;
     }
 }
 
@@ -400,6 +422,7 @@ nav > a:hover{
     text-align: center;
     font-size: 45px;
     margin-bottom: 25px;
+    color: var(--subColor);
 }
 
 .start .search{
